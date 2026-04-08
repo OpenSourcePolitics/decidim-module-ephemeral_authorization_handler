@@ -1,0 +1,21 @@
+{
+  "name": "decidim-ephemeral_authorization_handler",
+  "version": "0.0.1",
+  "description": "ephemeral authorization handler",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "lint": "eslint -c .eslintrc.json --no-error-on-unmatched-pattern --ignore-pattern app/packs/vendor --ext .js app/packs",
+    "stylelint": "stylelint app/packs/**/*.scss"
+  },
+  "dependencies": {
+    "@decidim/browserslist-config": "^0.31.2",
+    "@decidim/webpacker": "^0.31.2"
+  },
+  "devDependencies": {
+    "@decidim/dev": "^0.31.2",
+    "@decidim/eslint-config": "^0.31.2",
+    "@decidim/stylelint-config": "^0.31.2"
+  },
+  "browserslist": ["extends @decidim/browserslist-config"]
+}

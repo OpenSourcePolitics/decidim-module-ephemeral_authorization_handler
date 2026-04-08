@@ -1,0 +1,6 @@
+---
+en:
+  decidim:
+    components:
+      ephemeral_authorization_handler:
+        name: EphemeralAuthorizationHandler
