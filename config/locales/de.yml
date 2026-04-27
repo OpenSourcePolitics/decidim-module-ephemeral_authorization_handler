@@ -1,0 +1,40 @@
+---
+de:
+  decidim:
+    authorization_handlers:
+      ephemeral_authorization_handler:
+        explanation: Lassen Sie sich verifizieren, indem Sie einen an Ihr Mobiltelefon
+          gesendeten Code eingeben.
+        fields:
+          phone_number: telefonnummer
+        name: Ephemere Autorisierungsbearbeiter per SMS
+    components:
+      ephemeral_authorization_handler:
+        name: Ephemere Autorisierungsbearbeiter
+    ephemeral_authorization_handler:
+      sms:
+        error: Ein Fehler ist aufgetreten und wurde protokolliert. Bitte versuchen
+          Sie es erneut. Wenn der Fehler weiterhin besteht, wenden Sie sich bitte
+          an den Plattform-Support, um weitere Unterstützung zu erhalten.
+        success: Verifizierungscode an %{phone_number} gesendet.
+      verification:
+        authorizations:
+          sms:
+            error: Es ist ein Fehler aufgetreten, der protokolliert wurde. Bitte versuchen
+              Sie es erneut. Sollte der Fehler weiterhin bestehen, wenden Sie sich
+              bitte an den Plattform-Support, um weitere Hilfe zu erhalten.
+            have_not_received: Haben Sie ihn nicht erhalten?
+            resend_code: Code erneut senden
+            submit: Absenden
+            success: Bestätigungscode wurde gesendet an %{phone_number}.
+            welcome: Willkommen auf der <br><strong>%{organization}-Plattform!</strong>
+          verify_sms_code:
+            enter_code: 'Bitte geben Sie den Code ein:'
+            error: Der eingegebene Code ist ungültig
+            have_not_received: Haben Sie ihn nicht erhalten?
+            inputs: Ziffer %{count}
+            instruction: Sie sollten den Code an %{contact_info} erhalten haben.
+            resend_code: Code erneut senden
+            submit: Absenden
+            success: Verifizierung erfolgreich
+            welcome: Willkommen auf der <br><strong>%{organization}-Plattform!</strong>

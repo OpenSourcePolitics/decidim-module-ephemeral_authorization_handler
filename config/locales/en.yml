@@ -1,6 +1,37 @@
 ---
 en:
   decidim:
+    authorization_handlers:
+      ephemeral_authorization_handler:
+        explanation: Get verified by entering a code sent to your mobile phone
+        fields:
+          phone_number: phone number
+        name: Ephemeral Authorization via SMS
     components:
       ephemeral_authorization_handler:
         name: EphemeralAuthorizationHandler
+    ephemeral_authorization_handler:
+      sms:
+        error: An error occurred which has been logged, please try again. If the error
+          persists, please contact the platform support for further help.
+        success: Verification code sent to %{phone_number}.
+      verification:
+        authorizations:
+          sms:
+            error: An error occurred which has been logged, please try again. If the
+              error persists, please contact the platform support for further help.
+            have_not_received: You have not received it?
+            resend_code: Resend code
+            submit: Submit
+            success: Verification code sent to %{phone_number}.
+            welcome: Welcome to the <br><strong>%{organization} platform!</strong>
+          verify_sms_code:
+            enter_code: 'Please enter the code:'
+            error: The code entered is not valid
+            have_not_received: You have not received it?
+            inputs: digit number %{count}
+            instruction: You should have received the code to %{contact_info}
+            resend_code: Resend code
+            submit: Submit
+            success: Verification successful
+            welcome: Welcome to the <br><strong>%{organization} platform!</strong>
