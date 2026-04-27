@@ -1,1 +1,78 @@
 /* css for decidim_ephemeral_authorization_handler */
+
+@import "vendor/slim-select/slimselect";
+
+.ss-main.country-select{
+  .ss-single-selected{
+    padding: 10px;
+    font-size: 16px;
+    line-height: 0.75rem;
+    height: 2.4375rem;
+    border: 1px solid black;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .ss-single-selected,
+  .ss-option{
+    .country-flag img{
+      position: relative;
+      display: inline-block;
+      width: 1rem;
+      margin: -.1rem .5rem 0 0;
+    }
+  }
+}
+
+form input[type='number']::-webkit-outer-spin-button,
+form input[type='number']::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* css for decidim_admin_multi_factor */
+.sms-card {
+  margin-bottom: 30px;
+  background: rgb(243 244 247 / var(--tw-bg-opacity, 1));
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: visible;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  padding: 1.5rem;
+  width: 100%;
+  margin: auto;
+}
+.flex-digits{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+
+  .flex-digits-input{
+    display: flex;
+    flex: 0 0 auto;
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button{
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input{
+      margin: 0 auto;
+      height: 2.5rem;
+      width: 3rem;
+      text-align: center;
+
+
+      //@include breakpoint(smallmedium up){
+      //  height: 3rem;
+      //  width: 3rem;
+      //}
+    }
+  }
+}
