@@ -1,0 +1,38 @@
+<div class="layout-1col cols-10">
+  <header class="text-center py-10">
+    <h1 class="title-decorator inline-block text-left md:mb-12"><%= t(".welcome", organization: translated_attribute(current_organization.name)).html_safe %></h1>
+  </header>
+  <section>
+
+    <div class="card">
+      <div class="card-section">
+        <h2 class="text-center text-xl font-semibold mb-4"><%= t(".enter_code") %></h2>
+        <!--<p class="text-center text-xl">
+          <%#= t(".instruction", contact_info: @info) %>
+        </p>-->
+        <%= decidim_form_for(@form, url: verify_submitted_code_authorization_path, method: :post, class: "form-defaults") do |form| %>
+          <div class="form__wrapper">
+            <div id="verification" class="flex-digits">
+              <% Decidim::EphemeralAuthorizationHandler.auth_code_length.times do |ind| %>
+                <div class="flex-digits-input">
+                  <input type="number" pattern="\d*" min="0" max="9" name="<%= "digit#{ind + 1}" %>" autocomplete="off" aria-label="<%= t(".inputs", count: ind + 1) %>">
+                </div>
+              <% end %>
+            </div>
+            <br/>
+            <span class="form-error is-invisible" role="alert" id="verification-error"><%= t("decidim.forms.errors.error") %></span>
+            <%= form.hidden_field :verification %>
+            <div class="text-center mb-8">
+              <%= form.submit t(".submit"), class:"button button__sm md:button__lg button__secondary  w-40" %>
+            </div>
+          </div>
+        <% end %>
+        <p class="text-center text-xl">
+          <%= t(".have_not_received") %>
+          <%= link_to t(".resend_code"), sms_authorization_path %>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<%= append_javascript_pack_tag "decidim_ephemeral_authorization_handler" %>
