@@ -1,0 +1,28 @@
+<div class="layout-1col cols-10">
+  <header class="text-center py-10">
+    <h1 class="title-decorator inline-block text-left md:mb-12"><%= t(".welcome", organization: translated_attribute(current_organization.name)).html_safe %></h1>
+  </header>
+  <section class="w-1/2 m-auto">
+    <div class="sms-card">
+      <div class="card-section">
+        <%= decidim_form_for(@form, url: verify_authorization_path, method: :post, class: "block") do |form| %>
+          <div class="row flex flex-col md:flex-row sm:justify-between items-center">
+            <div class="columns">
+              <%= form.select :phone_country, phone_country_options(form.object.phone_country), { id: "omniauth_country", include_blank: true }, class: "country-select" %>
+            </div>
+            <div class="columns">
+              <%= form.number_field :phone_number, class: "w-full" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="text-center my-8">
+              <%= form.submit t(".submit"), class:"button button__sm md:button__lg button__secondary w-40" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
+<%= append_javascript_pack_tag "decidim_ephemeral_authorization_handler" %>
+<%= append_javascript_pack_tag "decidim_select_country" %>
