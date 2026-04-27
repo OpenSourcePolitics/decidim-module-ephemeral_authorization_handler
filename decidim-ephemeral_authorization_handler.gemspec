@@ -30,5 +30,6 @@ Gem::Specification.new do |s|
     end
   end
 
+  s.add_dependency "countries", "~> 5.1", ">= 5.1.2"
   s.add_dependency "decidim-core", Decidim::EphemeralAuthorizationHandler.decidim_version
 end
