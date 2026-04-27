@@ -8,3 +8,12 @@ ignore_unused:
 
 ignore_missing:
   - decidim.participatory_processes.scopes.global
+  - decidim.forms.errors.error
+  - decidim.verifications.authorizations.create.success
+  - decidim.verifications.authorizations.create.transferred
+  - decidim.ephemeral_authorization_handler.sms.success
+  - decidim.ephemeral_authorization_handler.sms.error
+  - decidim.ephemeral_authorization_handler.verification.authorizations.sms.*
+  - decidim.ephemeral_authorization_handler.verification.authorizations.verify_sms_code.*
+  - decidim.authorization_handlers.ephemeral_authorization_handler.*
+  - decidim.components.ephemeral_authorization_handler.*

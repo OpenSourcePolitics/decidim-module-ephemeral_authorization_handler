@@ -1,0 +1,38 @@
+---
+fr:
+  decidim:
+    authorization_handlers:
+      ephemeral_authorization_handler:
+        explanation: Obtenir une vérification en saisissant un code envoyé sur votre
+          téléphone portable
+        fields:
+          phone_number: numéro de téléphone
+        name: Autorisation Ephémère par SMS
+    components:
+      ephemeral_authorization_handler:
+        name: Autorisation Ephémère
+    ephemeral_authorization_handler:
+      sms:
+        error: Une erreur est survenue, veuillez réessayer. Si l'erreur persiste,
+          veuillez contacter le support de la plateforme pour plus d'aide.
+        success: Code de vérification envoyé à %{phone_number}.
+      verification:
+        authorizations:
+          sms:
+            error: Une erreur est survenue, veuillez réessayer. Si l'erreur persiste,
+              veuillez contacter le support de la plateforme pour plus d'aide.
+            have_not_received: Vous ne l'avez pas reçu?
+            resend_code: Renvoyer le code
+            submit: Soumettre
+            success: Code de vérification envoyé à %{phone_number}.
+            welcome: Bienvenue sur la plateforme <br><strong>%{organization} !</strong>.
+          verify_sms_code:
+            enter_code: 'Veuillez saisir le code :'
+            error: Le code saisi n'est pas valide
+            have_not_received: Vous ne l'avez pas reçu?
+            inputs: nombre de chiffres %{count}
+            instruction: Vous devriez avoir reçu le code au %{contact_info}
+            resend_code: Renvoyer le code
+            submit: Soumettre
+            success: Vérification réussie
+            welcome: Bienvenue sur la plateforme <br><strong>%{organization} !</strong>
