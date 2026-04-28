@@ -36,3 +36,7 @@ fr:
             submit: Soumettre
             success: Vérification réussie
             welcome: Bienvenue sur la plateforme <br><strong>%{organization} !</strong>
+  layouts:
+    decidim:
+      header:
+        confirm_close_ephemeral_session: Si vous quittez la page, votre session temporaire sera fermée. Toutefois, votre progression et votre activité seront enregistrées. Si vous avez terminé votre activité, cliquez sur OK.
