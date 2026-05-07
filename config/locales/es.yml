@@ -1,0 +1,40 @@
+es:
+  decidim:
+    authorization_handlers:
+      admin:
+        help:
+          - Esta autorización no requiere una cuenta, pero solo es válida por un tiempo limitado.
+          - Los participantes solicitan que se les envíe un código de verificación a su teléfono.
+          - Necesitan introducir el código para ser verificados.
+          - Si no reciben el código, pueden solicitarlo nuevamente.
+      ephemeral_authorization_handler:
+        explanation: Obtén la verificación ingresando un código enviado a tu teléfono móvil
+        fields:
+          phone_number: número de teléfono
+        name: Autorización efímera por SMS
+    components:
+      ephemeral_authorization_handler:
+        name: Autorización efímera
+    ephemeral_authorization_handler:
+      sms:
+        error: Ocurrió un error y se ha registrado. Por favor, inténtalo de nuevo. Si el error persiste, contacta con el soporte de la plataforma para obtener más ayuda.
+        success: Código de verificación enviado a %{phone_number}.
+      verification:
+        authorizations:
+          sms:
+            error: Ocurrió un error y se ha registrado. Por favor, inténtalo de nuevo. Si el error persiste, contacta con el soporte de la plataforma para obtener más ayuda.
+            have_not_received: ¿No lo has recibido?
+            resend_code: Reenviar código
+            submit: Enviar
+            success: Código de verificación enviado a %{phone_number}.
+            welcome: Bienvenido a la plataforma <br><strong>%{organization}!</strong>.
+          verify_sms_code:
+            enter_code: 'Por favor ingresa el código:'
+            error: El código ingresado no es válido
+            have_not_received: ¿No lo has recibido?
+            inputs: dígito %{count}
+            instruction: Deberías haber recibido el código en %{contact_info}
+            resend_code: Reenviar código
+            submit: Enviar
+            success: Verificación exitosa
+            welcome: Bienvenido a la plataforma <br><strong>%{organization}!</strong>
