@@ -32,6 +32,10 @@ module Decidim
             config.data_migrations_path << root.join("db/data").to_s
           end
         end
+
+        config.to_prepare do
+          require_relative "workflow"
+        end
       end
     end
   end

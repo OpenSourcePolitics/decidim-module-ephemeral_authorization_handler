@@ -2,6 +2,14 @@
 de:
   decidim:
     authorization_handlers:
+      admin:
+        help:
+        - Diese Autorisierung erfordert kein Konto, ist jedoch nur für eine begrenzte
+          Zeit gültig.
+        - Teilnehmer fordern an, dass ein Bestätigungscode an ihr Telefon gesendet
+          wird.
+        - Sie müssen den Code eingeben, um verifiziert zu werden.
+        - Wenn sie den Code nicht erhalten, können sie ihn erneut anfordern.
       ephemeral_authorization_handler:
         explanation: Lassen Sie sich verifizieren, indem Sie einen an Ihr Mobiltelefon
           gesendeten Code eingeben.

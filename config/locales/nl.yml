@@ -1,0 +1,44 @@
+nl:
+  decidim:
+    authorization_handlers:
+      admin:
+        help:
+          - Deze autorisatie vereist geen account, maar is slechts voor een beperkte tijd geldig.
+          - Deelnemers vragen om een verificatiecode naar hun telefoon te laten sturen.
+          - Ze moeten de code invoeren om geverifieerd te worden.
+          - Als ze de code niet ontvangen, kunnen ze deze opnieuw aanvragen.
+      ephemeral_authorization_handler:
+        explanation: Laat je verifiëren door een code in te voeren die naar je mobiele telefoon is gestuurd
+        fields:
+          phone_number: telefoonnummer
+        name: Ephemeral Authorization via SMS
+    components:
+      ephemeral_authorization_handler:
+        name: EphemeralAuthorizationHandler
+    ephemeral_authorization_handler:
+      sms:
+        error: Er is een fout opgetreden die is gelogd, probeer het opnieuw. Als de fout aanhoudt, neem dan contact op met de platformondersteuning voor verdere hulp.
+        success: Verificatiecode verzonden naar %{phone_number}.
+      verification:
+        authorizations:
+          sms:
+            error: Er is een fout opgetreden die is gelogd, probeer het opnieuw. Als de fout aanhoudt, neem dan contact op met de platformondersteuning voor verdere hulp.
+            have_not_received: Heb je het niet ontvangen?
+            resend_code: Code opnieuw verzenden
+            submit: Verzenden
+            success: Verificatiecode verzonden naar %{phone_number}.
+            welcome: Welkom op het <br><strong>%{organization}-platform!</strong>
+          verify_sms_code:
+            enter_code: 'Voer de code in:'
+            error: De ingevoerde code is ongeldig
+            have_not_received: Heb je het niet ontvangen?
+            inputs: cijfer nummer %{count}
+            instruction: Je zou de code moeten hebben ontvangen op %{contact_info}
+            resend_code: Code opnieuw verzenden
+            submit: Verzenden
+            success: Verificatie succesvol
+            welcome: Welkom op het <br><strong>%{organization}-platform!</strong>
+  layouts:
+    decidim:
+      header:
+        confirm_close_ephemeral_session: Als je de pagina verlaat, wordt je tijdelijke sessie gesloten. Je voortgang en activiteit worden echter opgeslagen. Als je klaar bent met je activiteit, klik op OK.

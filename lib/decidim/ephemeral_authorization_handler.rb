@@ -13,17 +13,29 @@ module Decidim
 
     # Default configuration digits to generate the auth code.
     config_accessor :auth_code_length do
-      4
+      Decidim::Env.new("DECIDIM_EPHEMERAL_AUTH_CODE_LENGTH", "4").to_i
     end
 
     # The country or countries to be selected in country selection
     # during sms verification/authentication. The default is being set to nil
     config_accessor :default_countries do
-      nil
+      Decidim::Env.new("DECIDIM_EPHEMERAL_AUTH_SMS_DEFAULT_COUNTRIES", nil).to_array
     end
 
     config_accessor :code_ttl do
-      5.minutes
+      Decidim::Env.new("DECIDIM_EPHEMERAL_AUTH_CODE_TTL", "5").to_i.minutes
+    end
+
+    config_accessor :expires_in do
+      Decidim::Env.new("DECIDIM_EPHEMERAL_AUTH_EXPIRES_IN", "30").to_i.days
+    end
+
+    config_accessor :renewable do
+      Decidim::Env.new("DECIDIM_EPHEMERAL_AUTH_RENEWABLE", true).default_or_present_if_exists
+    end
+
+    config_accessor :time_between_renewals do
+      Decidim::Env.new("DECIDIM_EPHEMERAL_AUTH_TIME_BETWEEN_RENEWALS", "1").to_i.days
     end
   end
 end
