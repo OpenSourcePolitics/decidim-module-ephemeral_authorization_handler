@@ -2,7 +2,6 @@
 fr:
   decidim:
     authorization_handlers:
-<<<<<<< HEAD
       admin:
         help:
         - Cette autorisation ne nécessite pas de compte, mais elle n'est valide que
@@ -10,8 +9,6 @@ fr:
         - Les participants demandent à recevoir un code de vérification sur leur téléphone.
         - Ils doivent introduire le code pour être vérifiés.
         - S'ils ne reçoivent pas le code, ils peuvent le demander à nouveau.
-=======
->>>>>>> origin/master
       ephemeral_authorization_handler:
         explanation: Obtenir une vérification en saisissant un code envoyé sur votre
           téléphone portable
@@ -49,10 +46,6 @@ fr:
   layouts:
     decidim:
       header:
-<<<<<<< HEAD
         confirm_close_ephemeral_session: Si vous quittez la page, votre session temporaire
           sera fermée. Toutefois, votre progression et votre activité seront enregistrées.
           Si vous avez terminé votre activité, cliquez sur OK.
-=======
-        confirm_close_ephemeral_session: Si vous quittez la page, votre session temporaire sera fermée. Toutefois, votre progression et votre activité seront enregistrées. Si vous avez terminé votre activité, cliquez sur OK.
->>>>>>> origin/master
