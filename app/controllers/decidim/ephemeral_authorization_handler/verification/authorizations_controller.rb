@@ -66,7 +66,11 @@ module Decidim
               handler.user.update(last_sign_in_at: Time.current, deleted_at: nil)
               sign_out(current_user)
               sign_in(handler.user)
+<<<<<<< HEAD
               redirect_to handler.user.extended_data.dig("onboarding", "redirect_path") || decidim_verifications.authorizations_path
+=======
+              redirect_to handler.user.extended_data.dig("onboarding", "redirect_path")
+>>>>>>> origin/master
             elsif transferable_handler?
               # if there is an existing authorization that can be transferred
               handler.user = current_user
@@ -126,7 +130,11 @@ module Decidim
             end
 
             flash[:notice] = message
+<<<<<<< HEAD
             redirect_to transfer.user.extended_data.dig("onboarding", "redirect_path") || decidim_verifications.authorizations_path
+=======
+            redirect_to transfer.user.extended_data["onboarding"]["redirect_path"]
+>>>>>>> origin/master
           else
             flash[:alert] = I18n.t("error", scope: "decidim.ephemeral_authorization_handler.verification.authorizations.verify_sms_code")
             redirect_to decidim_ephemeral_authorization_handler.verify_sms_code_authorization_path
