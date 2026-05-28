@@ -4,10 +4,11 @@ en:
     authorization_handlers:
       admin:
         help:
-          - This authorization doesn't require an account, but it is only valid for a limited time.
-          - Participants request a verification code to be sent to their phone.
-          - They need to introduce the code to get verified.
-          - If they do not receive the code, they can request it again.
+        - This authorization doesn't require an account, but it is only valid for
+          a limited time.
+        - Participants request a verification code to be sent to their phone.
+        - They need to introduce the code to get verified.
+        - If they do not receive the code, they can request it again.
       ephemeral_authorization_handler:
         explanation: Get verified by entering a code sent to your mobile phone
         fields:

@@ -17,3 +17,4 @@ ignore_missing:
   - decidim.ephemeral_authorization_handler.verification.authorizations.verify_sms_code.*
   - decidim.authorization_handlers.ephemeral_authorization_handler.*
   - decidim.components.ephemeral_authorization_handler.*
+  - decidim.authorization_handlers.admin.help
